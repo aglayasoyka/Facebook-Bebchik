@@ -10,9 +10,9 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var ImageViewLogo: UIImageView!
-    
     @IBOutlet weak var loginView: UIView!
-    
+    @IBOutlet weak var LoginButton: UIButton!
+    let toTabBarController = "toTabBarController"
     var isLogoChanged = false
     
     override func viewDidLoad() {
@@ -31,5 +31,9 @@ class LoginViewController: UIViewController {
         }
         isLogoChanged.toggle()
         
+    }
+    
+    @IBAction func TapLoginButton(_ sender: UIButton) {
+        performSegue(withIdentifier: toTabBarController, sender: nil)
     }
 }
