@@ -168,7 +168,7 @@
         <!--MyFriends-->
         <scene sceneID="iMn-X5-ByW">
             <objects>
-                <viewController title="MyFriends" id="j0q-M6-sK3" sceneMemberID="viewController">
+                <viewController title="MyFriends" id="j0q-M6-sK3" customClass="FriendsViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qpl-0K-Grt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,6 +188,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MyFriends" id="qf7-5L-7XN"/>
+                    <connections>
+                        <outlet property="myFriendsTableView" destination="8uo-bo-nCI" id="V6i-nj-b8S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXx-Ch-eyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,6 +246,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3b7-Ug-1Ti"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="krh-vG-3Bt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
