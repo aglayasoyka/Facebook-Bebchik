@@ -16,6 +16,10 @@
 		6350F1B4283CD81000314C42 /* FacebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350F1B3283CD81000314C42 /* FacebookTests.swift */; };
 		6350F1BE283CD81000314C42 /* FacebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350F1BD283CD81000314C42 /* FacebookUITests.swift */; };
 		6350F1C0283CD81000314C42 /* FacebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350F1BF283CD81000314C42 /* FacebookUITestsLaunchTests.swift */; };
+		635548BD284F3FE700471186 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635548BB284F3FE700471186 /* FriendsViewController.swift */; };
+		635548C2284F449300471186 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635548C0284F449300471186 /* CustomTableViewCell.swift */; };
+		635548C3284F449300471186 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635548C1284F449300471186 /* CustomTableViewCell.xib */; };
+		635548C7284F5EEE00471186 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635548C6284F5EEE00471186 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		6350F1B9283CD81000314C42 /* FacebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6350F1BD283CD81000314C42 /* FacebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookUITests.swift; sourceTree = "<group>"; };
 		6350F1BF283CD81000314C42 /* FacebookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		635548BB284F3FE700471186 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		635548C0284F449300471186 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = Facebook/controllers/Cell/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		635548C1284F449300471186 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = Facebook/controllers/Cell/CustomTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		635548C6284F5EEE00471186 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = Facebook/Friend.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,9 @@
 		6350F19B283CD80E00314C42 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
-				6350F19C283CD80E00314C42 /* AppDelegate.swift */,
-				6350F19E283CD80E00314C42 /* SceneDelegate.swift */,
-				6350F1A0283CD80E00314C42 /* LoginViewController.swift */,
+				635548C6284F5EEE00471186 /* Friend.swift */,
+				635548C4284F44DE00471186 /* system */,
+				635548BF284F402B00471186 /* controllers */,
 				6350F1A2283CD80E00314C42 /* Main.storyboard */,
 				6350F1A5283CD81000314C42 /* Assets.xcassets */,
 				6350F1A7283CD81000314C42 /* LaunchScreen.storyboard */,
@@ -125,6 +133,34 @@
 				6350F1BF283CD81000314C42 /* FacebookUITestsLaunchTests.swift */,
 			);
 			path = FacebookUITests;
+			sourceTree = "<group>";
+		};
+		635548BF284F402B00471186 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6350F1A0283CD80E00314C42 /* LoginViewController.swift */,
+				635548BB284F3FE700471186 /* FriendsViewController.swift */,
+				635548C5284F472000471186 /* Cell */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		635548C4284F44DE00471186 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				6350F19C283CD80E00314C42 /* AppDelegate.swift */,
+				6350F19E283CD80E00314C42 /* SceneDelegate.swift */,
+			);
+			path = system;
+			sourceTree = "<group>";
+		};
+		635548C5284F472000471186 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				635548C0284F449300471186 /* CustomTableViewCell.swift */,
+				635548C1284F449300471186 /* CustomTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +269,7 @@
 			files = (
 				6350F1A9283CD81000314C42 /* LaunchScreen.storyboard in Resources */,
 				6350F1A6283CD81000314C42 /* Assets.xcassets in Resources */,
+				635548C3284F449300471186 /* CustomTableViewCell.xib in Resources */,
 				6350F1A4283CD80E00314C42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635548BD284F3FE700471186 /* FriendsViewController.swift in Sources */,
+				635548C2284F449300471186 /* CustomTableViewCell.swift in Sources */,
 				6350F1A1283CD80E00314C42 /* LoginViewController.swift in Sources */,
+				635548C7284F5EEE00471186 /* Friend.swift in Sources */,
 				6350F19D283CD80E00314C42 /* AppDelegate.swift in Sources */,
 				6350F19F283CD80E00314C42 /* SceneDelegate.swift in Sources */,
 			);
