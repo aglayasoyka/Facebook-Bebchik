@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -163,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.22429906542056" y="81.641468682505405"/>
+            <point key="canvasLocation" x="-399" y="88"/>
         </scene>
         <!--MyFriends-->
         <scene sceneID="iMn-X5-ByW">
@@ -190,39 +189,31 @@
                     <navigationItem key="navigationItem" title="MyFriends" id="qf7-5L-7XN"/>
                     <connections>
                         <outlet property="myFriendsTableView" destination="8uo-bo-nCI" id="V6i-nj-b8S"/>
+                        <segue destination="z2z-Bn-tXu" kind="show" identifier="fromFriendsListToGallery" id="1iR-32-0Pq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXx-Ch-eyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697.1014492753625" y="-437.27678571428572"/>
+            <point key="canvasLocation" x="2696" y="-437"/>
         </scene>
-        <!--View Controller-->
+        <!--Galery View Controller-->
         <scene sceneID="k53-IA-fgG">
             <objects>
-                <viewController id="z2z-Bn-tXu" sceneMemberID="viewController">
+                <viewController id="z2z-Bn-tXu" customClass="GaleryViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ad-GO-mB7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TbT-6S-yMr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nZ2-6k-nIZ">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nZ2-6k-nIZ">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fa8-gA-6pu">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BE2-kj-Glo">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d7o-b6-0JI"/>
@@ -234,10 +225,14 @@
                             <constraint firstItem="TbT-6S-yMr" firstAttribute="leading" secondItem="d7o-b6-0JI" secondAttribute="leading" id="qDS-ad-wCw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VF6-YD-0h1"/>
+                    <connections>
+                        <outlet property="collectionView" destination="TbT-6S-yMr" id="J3m-5c-daX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDY-fE-IZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4373.913043478261" y="-333.48214285714283"/>
+            <point key="canvasLocation" x="3545" y="-437"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bHA-qP-5rd">
@@ -257,7 +252,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oh5-ht-P24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.69565217391312" y="88.392857142857139"/>
+            <point key="canvasLocation" x="472" y="88"/>
         </scene>
         <!--MyGroups-->
         <scene sceneID="bdl-ir-h5b">
@@ -291,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5k-I6-UEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2756.521739130435" y="276.5625"/>
+            <point key="canvasLocation" x="2697" y="400"/>
         </scene>
         <!--AllGroups-->
         <scene sceneID="ZRj-YL-Q2Y">
@@ -319,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8x-S9-R3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3627.5362318840585" y="307.36607142857139"/>
+            <point key="canvasLocation" x="3545" y="400"/>
         </scene>
         <!--MyFriends-->
         <scene sceneID="YQN-iP-Ha3">
@@ -338,7 +333,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grl-Qt-QX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786.9565217391305" y="-437.27678571428572"/>
+            <point key="canvasLocation" x="1846" y="-437"/>
         </scene>
         <!--MyGrops-->
         <scene sceneID="83N-eL-3QF">
@@ -357,7 +352,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfJ-24-a5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846.376811594203" y="276.5625"/>
+            <point key="canvasLocation" x="1845" y="401"/>
         </scene>
     </scenes>
     <resources>

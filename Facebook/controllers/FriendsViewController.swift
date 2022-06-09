@@ -8,15 +8,17 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
+    
+    let fromFrendsListToGallerySegue = "fromFriendsListToGallery"
 
     let customTableViewCelReuseIdentifier = "customTableViewCelReuseIdentifier"
     
     @IBOutlet var myFriendsTableView: UITableView?
     
     func fillData() -> [Friend] {
-        let friend1 = Friend(name: "Good Boy", avatar: "Male-Avatar.png")
-        let friend2 = Friend(name: "Good Girl", avatar: "Female-Avatar")
-        let friend3 = Friend(name: "No Name",avatar: "no-avatar")
+        let friend1 = Friend(name: "Good Boy", avatar: "Male-Avatar.png", fotoAlbum: ["Male-Avatar"])
+        let friend2 = Friend(name: "Good Girl", avatar: "Female-Avatar", fotoAlbum: ["Female-Avatar", "Female-Avatar", "Female-Avatar"])
+        let friend3 = Friend(name: "No Name",avatar: "no-avatar", fotoAlbum: ["no-avatar", "no-avatar"])
     
         var friendsArray = [Friend]()
         friendsArray.append(friend1)
@@ -62,6 +64,22 @@ extension FriendsViewController: UITableViewDataSource{
 extension FriendsViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 100
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == fromFrendsListToGallerySegue,
+           let destinationController = segue.destination as? GaleryViewController,
+           let fotos = sender as? [String] {
+            
+            destinationController.fotoAlbum = fotos
+    }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+    
+        let fotos = myFriends[indexPath.row].fotoAlbum
+        performSegue(withIdentifier: fromFrendsListToGallerySegue, sender: fotos)
     }
 }
 

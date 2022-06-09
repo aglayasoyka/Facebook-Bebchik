@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell" customModule="Facebook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="153"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="181" height="153"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-WL-sBv">
+                        <rect key="frame" x="56" y="42" width="69" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vyz-WL-sBv" secondAttribute="height" multiplier="1:1" id="S8h-hF-Hsz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="vyz-WL-sBv" secondAttribute="top" constant="2" id="CV6-C1-Avc"/>
+                <constraint firstItem="vyz-WL-sBv" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Pfk-2L-bfI"/>
+                <constraint firstItem="vyz-WL-sBv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="p1v-Tj-DfW"/>
+            </constraints>
+            <size key="customSize" width="181" height="153"/>
+            <connections>
+                <outlet property="photoImageView" destination="vyz-WL-sBv" id="IdK-oD-8Zq"/>
+            </connections>
+            <point key="canvasLocation" x="-219.56521739130437" y="13.727678571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>
