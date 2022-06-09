@@ -59,3 +59,4 @@ extension GaleryViewController: UICollectionViewDelegateFlowLayout{
         return CGSize(width: cellWidth, height: cellWidth)
     }
 }
+

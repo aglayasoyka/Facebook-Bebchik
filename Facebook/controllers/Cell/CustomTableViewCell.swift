@@ -24,6 +24,9 @@ class CustomTableViewCell: UITableViewCell {
         nameLabel.text = name
     }
         
-
+    func configure(_ group: Group) {
+        photoImageView.image = UIImage(named: group.avatar)
+        nameLabel.text = group.name
+    }
     
 }

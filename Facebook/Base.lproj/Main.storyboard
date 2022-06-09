@@ -291,7 +291,7 @@
         <!--AllGroups-->
         <scene sceneID="ZRj-YL-Q2Y">
             <objects>
-                <viewController id="Xdz-e8-7v3" sceneMemberID="viewController">
+                <viewController id="Xdz-e8-7v3" customClass="AllGroupsViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VUG-0h-5Qr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,6 +311,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AllGroups" id="fUj-0c-btd"/>
+                    <connections>
+                        <outlet property="allGroupsTableBiew" destination="Pgf-CT-ZLi" id="cca-ev-FXh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8x-S9-R3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
