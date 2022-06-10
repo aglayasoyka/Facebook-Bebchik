@@ -257,7 +257,7 @@
         <!--MyGroups-->
         <scene sceneID="bdl-ir-h5b">
             <objects>
-                <viewController id="Vjc-mo-IY9" sceneMemberID="viewController">
+                <viewController id="Vjc-mo-IY9" customClass="MyGroupsViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7NJ-5a-k6X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,6 +283,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="u7p-YW-Ahg" id="4Nh-G4-HI9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5k-I6-UEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

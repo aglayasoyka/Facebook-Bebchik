@@ -57,6 +57,14 @@ extension AllGroupsViewController: UITableViewDataSource{
 }
 
 extension AllGroupsViewController:UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let group = groups[indexPath.item]
+        NotificationCenter.default.post(name: Notification.Name("PressToGroup"), object: group)
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 100
     }

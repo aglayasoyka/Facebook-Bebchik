@@ -14,7 +14,7 @@ class GaleryViewController: UIViewController {
     
     let photoCollectionViewCellReuseIdentifier = "phtoCollectionViewCellReuseIdentifier"
     
-    var fotoAlbum = [String]()
+    var photoAlbum = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +35,14 @@ extension GaleryViewController: UICollectionViewDelegate{
 extension GaleryViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return self.fotoAlbum.count
+        return self.photoAlbum.count
     }
 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCollectionViewCellReuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
         
-        cell.configure(image: UIImage(named: self.fotoAlbum[indexPath.item]))
+        cell.configure(image: UIImage(named: self.photoAlbum[indexPath.item]))
         
         return cell
     }

@@ -10,6 +10,6 @@ import Foundation
 struct Friend {
     var name: String
     var avatar: String?
-    var fotoAlbum = [String]()
+    var photoAlbum = [String]()
 }
 
