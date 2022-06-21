@@ -9,23 +9,26 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageView: avatarUIView!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    
+     
+
     override func prepareForReuse() {
         super.prepareForReuse()
-        photoImageView.image = nil
+        photoImageView.photoImage = nil
         nameLabel.text = nil
+        
+        
     }
     
     func configure(image: UIImage?, name: String?) {
-        photoImageView.image = image
+        photoImageView.photoImage = image
         nameLabel.text = name
+        
     }
         
     func configure(_ group: Group) {
-        photoImageView.image = UIImage(named: group.avatar)
+        photoImageView.photoImage = UIImage(named: group.avatar)
         nameLabel.text = group.name
     }
     

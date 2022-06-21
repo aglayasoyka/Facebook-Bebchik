@@ -56,7 +56,7 @@ extension GaleryViewController: UICollectionViewDelegateFlowLayout{
         let whiteSpaces: CGFloat = 20
         let cellWidth = width / 3 - whiteSpaces
 
-        return CGSize(width: cellWidth, height: cellWidth)
+        return CGSize(width: cellWidth, height: cellWidth + 20)
     }
 }
 

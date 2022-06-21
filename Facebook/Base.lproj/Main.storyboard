@@ -156,7 +156,9 @@
                     <connections>
                         <outlet property="ImageViewLogo" destination="gZb-1k-aTK" id="I9w-hT-DH3"/>
                         <outlet property="LoginButton" destination="BUu-AO-cBe" id="LrK-cB-v2P"/>
+                        <outlet property="emailTextField" destination="BV7-Nx-z6s" id="urb-kj-m2E"/>
                         <outlet property="loginView" destination="dBl-nX-MHc" id="tt4-oS-PUg"/>
+                        <outlet property="passwordTextField" destination="K7a-Ps-v7z" id="TE1-3W-8L8"/>
                         <segue destination="ioS-WJ-L6C" kind="presentation" identifier="toTabBarController" modalPresentationStyle="fullScreen" id="fnl-NM-9q0"/>
                     </connections>
                 </viewController>

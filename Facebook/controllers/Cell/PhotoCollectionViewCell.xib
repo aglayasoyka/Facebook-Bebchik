@@ -4,37 +4,51 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell" customModule="Facebook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="181" height="153"/>
+            <rect key="frame" x="0.0" y="0.0" width="183" height="195"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="181" height="153"/>
+                <rect key="frame" x="0.0" y="0.0" width="183" height="195"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-WL-sBv">
-                        <rect key="frame" x="56" y="42" width="69" height="69"/>
+                        <rect key="frame" x="69.5" y="44" width="44" height="44"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="44" id="4kf-0G-0u0"/>
                             <constraint firstAttribute="width" secondItem="vyz-WL-sBv" secondAttribute="height" multiplier="1:1" id="S8h-hF-Hsz"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-Q9-Cl2" customClass="LikeControlView" customModule="Facebook" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="88" width="183" height="95"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="vyz-WL-sBv" secondAttribute="top" constant="2" id="CV6-C1-Avc"/>
-                <constraint firstItem="vyz-WL-sBv" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Pfk-2L-bfI"/>
-                <constraint firstItem="vyz-WL-sBv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="p1v-Tj-DfW"/>
+                <constraint firstItem="ndo-Q9-Cl2" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="Bb4-SP-iFQ"/>
+                <constraint firstItem="ndo-Q9-Cl2" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="YJE-oK-DhB"/>
+                <constraint firstItem="ndo-Q9-Cl2" firstAttribute="top" secondItem="vyz-WL-sBv" secondAttribute="bottom" id="aUp-pL-sAP"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="ndo-Q9-Cl2" secondAttribute="bottom" constant="12" id="b36-sX-fJ1"/>
+                <constraint firstItem="vyz-WL-sBv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="klW-bm-tol"/>
+                <constraint firstItem="vyz-WL-sBv" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="yn0-dA-Czz"/>
             </constraints>
-            <size key="customSize" width="181" height="153"/>
+            <size key="customSize" width="183" height="195"/>
             <connections>
                 <outlet property="photoImageView" destination="vyz-WL-sBv" id="IdK-oD-8Zq"/>
             </connections>
-            <point key="canvasLocation" x="-219.56521739130437" y="13.727678571428571"/>
+            <point key="canvasLocation" x="-218.11594202898553" y="27.790178571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

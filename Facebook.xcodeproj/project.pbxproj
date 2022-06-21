@@ -24,8 +24,12 @@
 		635548BD284F3FE700471186 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635548BB284F3FE700471186 /* FriendsViewController.swift */; };
 		635548C2284F449300471186 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635548C0284F449300471186 /* CustomTableViewCell.swift */; };
 		635548C3284F449300471186 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635548C1284F449300471186 /* CustomTableViewCell.xib */; };
+		6393FD3F285B344700B33A08 /* LikeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6393FD3E285B344700B33A08 /* LikeControlView.swift */; };
+		6393FD41285B347200B33A08 /* LikeControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6393FD40285B347200B33A08 /* LikeControlView.xib */; };
 		63E49A362853772700AD48EF /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E49A352853772700AD48EF /* MyGroupsViewController.swift */; };
 		63E49A382853785B00AD48EF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E49A372853785B00AD48EF /* Friend.swift */; };
+		63EF13412858C57100117520 /* avatarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF13402858C57100117520 /* avatarUIView.swift */; };
+		63EF13442858C5D800117520 /* avatarUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EF13432858C5D700117520 /* avatarUIView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +71,12 @@
 		635548BB284F3FE700471186 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		635548C0284F449300471186 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = Facebook/controllers/Cell/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		635548C1284F449300471186 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = Facebook/controllers/Cell/CustomTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		6393FD3E285B344700B33A08 /* LikeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControlView.swift; sourceTree = "<group>"; };
+		6393FD40285B347200B33A08 /* LikeControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeControlView.xib; sourceTree = "<group>"; };
 		63E49A352853772700AD48EF /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
 		63E49A372853785B00AD48EF /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		63EF13402858C57100117520 /* avatarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarUIView.swift; sourceTree = "<group>"; };
+		63EF13432858C5D700117520 /* avatarUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = avatarUIView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,7 @@
 		635548BF284F402B00471186 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63EF13422858C58300117520 /* View */,
 				635548C5284F472000471186 /* Cell */,
 				6350F1A0283CD80E00314C42 /* LoginViewController.swift */,
 				635548BB284F3FE700471186 /* FriendsViewController.swift */,
@@ -187,6 +196,17 @@
 				631A80FD28525462003417CC /* Group.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		63EF13422858C58300117520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63EF13402858C57100117520 /* avatarUIView.swift */,
+				63EF13432858C5D700117520 /* avatarUIView.xib */,
+				6393FD3E285B344700B33A08 /* LikeControlView.swift */,
+				6393FD40285B347200B33A08 /* LikeControlView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +313,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6393FD41285B347200B33A08 /* LikeControlView.xib in Resources */,
 				6350F1A9283CD81000314C42 /* LaunchScreen.storyboard in Resources */,
+				63EF13442858C5D800117520 /* avatarUIView.xib in Resources */,
 				6318E22A28522B88000B7AC9 /* PhotoCollectionViewCell.xib in Resources */,
 				6350F1A6283CD81000314C42 /* Assets.xcassets in Resources */,
 				635548C3284F449300471186 /* CustomTableViewCell.xib in Resources */,
@@ -324,6 +346,7 @@
 			files = (
 				6318E22C28522CC7000B7AC9 /* GaleryViewController.swift in Sources */,
 				63E49A362853772700AD48EF /* MyGroupsViewController.swift in Sources */,
+				6393FD3F285B344700B33A08 /* LikeControlView.swift in Sources */,
 				635548BD284F3FE700471186 /* FriendsViewController.swift in Sources */,
 				63E49A382853785B00AD48EF /* Friend.swift in Sources */,
 				635548C2284F449300471186 /* CustomTableViewCell.swift in Sources */,
@@ -331,6 +354,7 @@
 				6350F1A1283CD80E00314C42 /* LoginViewController.swift in Sources */,
 				631A80FC285253AF003417CC /* AllGroupsViewController.swift in Sources */,
 				6318E22928522B88000B7AC9 /* PhotoCollectionViewCell.swift in Sources */,
+				63EF13412858C57100117520 /* avatarUIView.swift in Sources */,
 				6350F19D283CD80E00314C42 /* AppDelegate.swift in Sources */,
 				6350F19F283CD80E00314C42 /* SceneDelegate.swift in Sources */,
 			);
